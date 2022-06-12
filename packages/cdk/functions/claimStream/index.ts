@@ -5,7 +5,7 @@ export const handler = async function (
   event: DynamoDBStreamEvent
 ): Promise<unknown> {
   await Promise.all(
-    event.Records.map(async (record) => {
+    event.Records.map(async (record: any) => {
       if (record.eventName === "MODIFY") {
         const oldStatus = AWS.DynamoDB.Converter.output(
           record.dynamodb?.OldImage?.status as AWS.DynamoDB.AttributeMap
