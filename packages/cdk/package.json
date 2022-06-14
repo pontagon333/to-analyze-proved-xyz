@@ -43,6 +43,10 @@
     "chrome-aws-lambda": "^10.1.0",
     "constructs": "^10.0.0",
     "discord.js": "^13.8.0",
+    "esbuild": "^0.14.43",
+    "fetch-blob": "^3.1.5",
+    "formdata-polyfill": "^4.0.10",
+    "node-fetch": "^3.2.6",
     "source-map-support": "^0.5.16"
   }
 }
