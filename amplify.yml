@@ -10,11 +10,11 @@ applications:
       phases:
         preBuild:
           commands:
-            - nvm install 14.17.5 && nvm use v14
+            - nvm install 16.6.0 && nvm use v16
             - yarn install
         build:
           commands:
-            - nvm use v14
+            - nvm use v16
             - yarn run build
       artifacts:
         baseDirectory: .next
