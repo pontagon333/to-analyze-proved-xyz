@@ -4,6 +4,7 @@ import fetch from "node-fetch";
 import { getSecret } from "/opt/nodejs/secretManager";
 import { userUpdate, userGet } from "/opt/nodejs/dynamodb-utils";
 import { OrgInput, UserUpdateInput } from "@/graphql";
+import { URLSearchParams } from 'node:url';
 const s3 = new AWS.S3();
 const { USER_TABLE_NAME } = process.env;
 
