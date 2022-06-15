@@ -17,7 +17,7 @@ applications:
             - nvm use v16
             - yarn run build
       artifacts:
-        baseDirectory: out
+        baseDirectory: .next
         files:
           - "**/*"
       cache:
