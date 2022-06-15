@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import { ArrowRightIcon } from "@heroicons/react/solid";
 
-import provedCard from "../../../public/card.png";
+// import provedCard from "../../../public/card.png";
 import { HowToUse } from "components/ui/HowToUse";
 
 export const LandingPage = () => {
