@@ -63,8 +63,7 @@ export const LandingPage = () => {
                 <img
                   src="/card.png"
                   alt="Picture of the author"
-                  className="rounded-2xl absolute z-10"
-                  // layout="intrinsic"
+                  className="rounded-2xl z-10"
                   width="720"
                   height="864"
                   draggable="false"
