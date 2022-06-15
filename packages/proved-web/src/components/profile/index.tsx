@@ -7,7 +7,7 @@ import { WalletLogo } from 'components/ui/WalletLogo';
 import { useUser } from 'contexts/UserContext';
 import { proofList } from 'graphql/queries';
 import { useVerify } from 'hooks/useVerify';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { shortenName } from 'utils/userName';
@@ -52,7 +52,7 @@ export const Profile = () => {
   const renderOrgImage = (org: Org | null) => {
     if (!org) return null;
     const imgUrl = `https://cdn.discordapp.com/icons/${org.id}/${org.discordIcon}.webp?size=96`;
-    return <Image className="rounded-full" src={imgUrl} width={48} height={48} />;
+    return <img className="rounded-full" src={imgUrl} width="48" height="48" />;
   };
 
   const renderOrgNFTs = (org: Org | null) => {

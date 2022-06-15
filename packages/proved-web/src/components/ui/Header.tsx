@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useEffect } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -78,9 +78,9 @@ export const Header = ({
               <div className="flex">
                 <Link href={user?.isAuthenticated ? "/home" : "/"} passHref>
                   <a className="flex-shrink-0 flex items-center">
-                    <Image
-                      width={144}
-                      height={39}
+                    <img
+                      width="144"
+                      height="39"
                       src="/proved-logo.svg"
                       alt="Logo"
                     />

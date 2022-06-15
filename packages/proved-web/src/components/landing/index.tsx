@@ -1,4 +1,5 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+// import Image from "next/image";
 import { useUser } from "contexts/UserContext";
 import { useRouter } from "next/router";
 
@@ -59,13 +60,13 @@ export const LandingPage = () => {
               </div>
 
               <div className="relative md:col-span-6 lg:col-span-6">
-                <Image
-                  src={provedCard}
+                <img
+                  src="/card.png"
                   alt="Picture of the author"
                   className="rounded-2xl absolute z-10"
-                  layout="intrinsic"
-                  width={720}
-                  height={864}
+                  // layout="intrinsic"
+                  width="720"
+                  height="864"
                   draggable="false"
                 />
               </div>

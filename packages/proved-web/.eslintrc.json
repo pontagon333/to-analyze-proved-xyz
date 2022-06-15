@@ -1,4 +1,7 @@
 {
   "plugins": ["import"],
-  "extends": ["plugin:@next/next/recommended", "prettier"]
+  "extends": ["plugin:@next/next/recommended", "prettier"],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
 }

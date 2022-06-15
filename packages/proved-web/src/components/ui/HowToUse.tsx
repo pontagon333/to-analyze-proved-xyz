@@ -1,6 +1,6 @@
 import { Tab } from "@headlessui/react";
 import { Fragment } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export const HowToUse = () => {
   return (
@@ -8,30 +8,30 @@ export const HowToUse = () => {
       <div className="lg:grid lg:grid-cols-12 lg:gap-12">
         <Tab.Panels className="col-span-7 mb-4">
           <Tab.Panel>
-            <Image
+            <img
               src="/howToUse01.jpeg"
               alt="how to use"
               className="rounded-lg"
-              height={488}
-              width={734}
+              height="488"
+              width="734"
             />
           </Tab.Panel>
           <Tab.Panel>
-            <Image
+            <img
               src="/howToUse02.jpeg"
               alt="how to use"
               className="rounded-lg"
-              height={488}
-              width={734}
+              height="488"
+              width="734"
             />
           </Tab.Panel>
           <Tab.Panel>
-            <Image
+            <img
               src="/howToUse03.jpeg"
               alt="how to use"
               className="rounded-lg"
-              height={488}
-              width={734}
+              height="488"
+              width="734"
             />
           </Tab.Panel>
         </Tab.Panels>

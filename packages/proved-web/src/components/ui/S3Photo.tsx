@@ -1,5 +1,5 @@
 import { Storage } from "aws-amplify";
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 // TODO temporary type
@@ -53,7 +53,7 @@ export const S3Photo = ({ alt, height, identityId, object, width }: Props) => {
   return (
     <>
       {photoUrl && (
-        <Image alt={alt} src={photoUrl} height={height} width={width} />
+        <img alt={alt} src={photoUrl} height={height} width={width} />
       )}
     </>
   );
