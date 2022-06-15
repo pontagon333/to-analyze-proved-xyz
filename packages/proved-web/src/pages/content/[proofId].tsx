@@ -3,41 +3,41 @@ import { Layout } from "components/Layout";
 import { Content } from "components/content";
 import awsExports from "../../aws-exports";
 import { Seo } from "components/ui/Seo";
-import { GetServerSideProps } from "next";
+// import { GetServerSideProps } from "next";
 
 // client-side credentials are passed to the server via cookies
 Amplify.configure({ ...awsExports, ssr: true });
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const proofId = context.query?.proofId;
-  if (!proofId) {
-    return {
-      props: {},
-    };
-  }
-  const searchParams = new URLSearchParams();
-  searchParams.set("proofId", proofId as string);
-  try {
-    const result = await (
-      await fetch(
-        `${process.env.NEXT_PUBLIC_OGP_API}/gen-nft-ogp?${searchParams}`,
-        {
-          method: "GET",
-        }
-      )
-    ).json();
-    return {
-      props: {
-        imageUrl: result.imageUrl,
-      },
-    };
-  } catch (e) {
-    console.log("===e", e);
-    return {
-      props: {},
-    };
-  }
-};
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const proofId = context.query?.proofId;
+//   if (!proofId) {
+//     return {
+//       props: {},
+//     };
+//   }
+//   const searchParams = new URLSearchParams();
+//   searchParams.set("proofId", proofId as string);
+//   try {
+//     const result = await (
+//       await fetch(
+//         `${process.env.NEXT_PUBLIC_OGP_API}/gen-nft-ogp?${searchParams}`,
+//         {
+//           method: "GET",
+//         }
+//       )
+//     ).json();
+//     return {
+//       props: {
+//         imageUrl: result.imageUrl,
+//       },
+//     };
+//   } catch (e) {
+//     console.log("===e", e);
+//     return {
+//       props: {},
+//     };
+//   }
+// };
 
 interface Props {
   imageUrl?: string;
