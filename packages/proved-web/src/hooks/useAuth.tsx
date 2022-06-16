@@ -14,19 +14,17 @@ export const useAuth = () => {
         setError(new Error("No address"));
         return;
       }
-
+      console.log('5555')
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_AUTH_API}/nonce?address=${address}`,
         {
           method: "GET",
         }
       );
-
       const json = await res.json();
-
+      // 署名の要求
       const signer = await connector.getSigner();
       const signature = await signer.signMessage(`Proved nonce ${json.nonce}`);
-
       const body = JSON.stringify({
         address,
         signature: signature,
@@ -36,10 +34,15 @@ export const useAuth = () => {
         `${process.env.NEXT_PUBLIC_AUTH_API}/auth`,
         {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Request-Headers": "*",
+            "Access-Control-Request-Method": "*"
+          },
           body,
         }
       );
-
+      console.log('6666')
       const authJson = await authResult.json();
       console.log("==== authJson", authJson);
       await Auth.federatedSignIn(
