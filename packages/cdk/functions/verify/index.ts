@@ -54,7 +54,7 @@ export const handler = async function (
     process.env.DISCORD_CLIENT_SECRET as string
   );
   const redirect_uri = isLocal
-    ? `http://localhost:3000/${path}`
+    ? `https://main.d2mppgtew9s3zp.amplifyapp.com/${path}`
     : (process.env.REDIRECT_URL as string) + path;
 
   try {

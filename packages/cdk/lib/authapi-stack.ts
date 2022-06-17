@@ -32,7 +32,7 @@ export class AuthApiSetup extends Construct {
         ],
         allowMethods: ["OPTIONS", "GET", "POST", "PUT", "PATCH", "DELETE"],
         allowCredentials: true,
-        allowOrigins: ["http://localhost:3000"],
+        allowOrigins: ["https://main.d2mppgtew9s3zp.amplifyapp.com/"],
       },
     });
 
